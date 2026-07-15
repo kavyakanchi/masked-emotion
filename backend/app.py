@@ -18,7 +18,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Load the TFLITE model relative to the backend directory
-MODEL_PATH = os.path.join(os.path.dirname(__file__), '..', 'masked_emotion_cnn.tflite')
+MODEL_PATH = os.path.join(os.path.dirname(__file__), 'masked_emotion_cnn.tflite')
 interpreter = None
 try:
     interpreter = tflite.Interpreter(model_path=MODEL_PATH)
